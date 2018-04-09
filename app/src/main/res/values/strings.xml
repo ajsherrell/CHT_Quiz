@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">quizAppActivity</string>
+    <string name="chtLabel">Hyperbaric Tech Quiz</string>
+
+    <!-- test question 1 -->
+    <string name="test1">Which gas law has an inverse relationship between pressure and volume?</string>
+    <!-- radio button 1a 1b 1c -->
+    <string name="radio1a">a. Dalton\'s Law</string>
+    <string name="radio1bAnswer">b. Boyle\'s Law</string>
+    <string name="radio1c">c. Charles\' Law</string>
+
+    <!-- test question 2 -->
+    <string name="test2">Which formula applies to Boyle\'s Law?</string>
+    <!-- radio button 2a 2b 2c -->
+    <string name="radio2aAnswer">a. P1V1 = P2V2</string>
+    <string name="radio2b">b. V1T2 = V2T1</string>
+    <string name="radio2c">c. P1T2 = P2T1</string>
+
+    <!-- test question 3 -->
+    <string name="test3">What is a common unit of measure used in hyperbaric oxygen therapy?</string>
+    <!-- radio button 3a 3b 3c -->
+    <string name="radio3a">a. PVT</string>
+    <string name="radio3b">b. ABD</string>
+    <string name="radio3cAnswer">c. ATA</string>
+
+
+    <!--test question 4-->
+    <string name="test4">Which gas law is NOT applicable to hyperbaric oxygen therapy?</string>
+    <!-- radio button 4a 4b 4c -->
+    <string name="radio4a">a. Graham\’s Law</string>
+    <string name="radio4bAnswer">b. Lehman\’s Law</string>
+    <string name="radio4c">c. Pascal’s Law</string>
+
+    <!-- test question 5 -->
+    <string name="test5">Choose the answer that correctly defines Boyle’s Law.</string>
+    <!-- radio button 5a 5b 5c -->
+    <string name="radio5aAnswer">a. The pressure of a gas is inversely proportional to the volume of that gas.</string>
+    <string name="radio5b">b. The temperature of a gas is inversely proportional to the pressure of that gas.</string>
+    <string name="radio5c">c. The volume of a gas in inversely proportional to the temperature of that gas.</string>
+
+    <!-- test question 6 -->
+    <string name="test6">Which gas law is called the law of partial pressures, defined as the sum of partial pressures in a mixture of gases equals the total pressure?</string>
+    <!-- radio button 6a 6b 6c -->
+    <string name="radio6a">a. Gay Lussac\’s Law</string>
+    <string name="radio6b">b. Graham\’s Law</string>
+    <string name="radio6cAnswer">c. Dalton\’s Law</string>
+
+    <!-- test question 7 -->
+    <string name="test7">Which regulatory agencies are related to hyperbaric oxygen therapy?</string>
+    <!-- checkbox 7a 7b 7c 7d -->
+    <string name="checkbox7aAnswer">a. UHMS</string>
+    <string name="checkbox7b">b. ICCO</string>
+    <string name="checkbox7cAnswer">c. NFPA</string>
+    <string name="checkbox7dAnswer">d. PVHO</string>
+
+    <!-- edittext answer hint -->
+    <string name="typeAnswer">Type Answer</string>
+
+    <!-- test question 8 -->
+    <string name="test8">Name the Law that causes air spaces in the body to shrink when pressurized.</string>
+    <!-- edittext 8 -->
+    <string name="edittext8Answer">Boyle\’s Law</string>
+
+    <!-- test question 9 -->
+    <string name="test9">Name two methods of ear equalization during decompression.</string>
+    <!-- checkbox 9a 9b 9c 9d -->
+    <string name="checkbox9a">a. Pulling on the affected ear</string>
+    <string name="checkbox9bAnswer"> b. Valsalva maneuver</string>
+    <string name="checkbox9c">c. Kenyan maneuver</string>
+    <string name="checkbox9dAnswer">d. Toynbee maneuver</string>
+
+    <!-- test question 10 -->
+    <string name="test10">Name the acronym for the procedure during which leads are attached to the skin surrounding a wound in order to detect the amount of the flow of oxygen in mmHG under the skin.</string>
+    <!-- edittext 10 -->
+    <string name="edittext10Answer">TCOM</string>
+
+    <!-- submit answers -->
+    <string name="submit">Submit</string>
+
+    <!-- reset answers -->
+    <string name="reset">Reset</string>
+
+</resources>
