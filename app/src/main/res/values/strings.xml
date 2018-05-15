@@ -2,6 +2,9 @@
     <string name="app_name">quizAppActivity</string>
     <string name="chtLabel">Hyperbaric Tech Quiz</string>
 
+    <!--image content description-->
+    <string name="chamberImage">Hyperbaric Chamber</string>
+
     <!-- test question 1 -->
     <string name="test1">Which gas law has an inverse relationship between pressure and volume?</string>
     <!-- radio button 1a 1b 1c -->

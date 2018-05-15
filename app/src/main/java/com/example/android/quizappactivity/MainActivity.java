@@ -12,20 +12,26 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     //global variables
     // int
-    int score = 0;
+    int score;
 
     //checkboxes
     CheckBox checkbox7aAnswer;
+    CheckBox checkbox7bAnswer;
     CheckBox checkbox7cAnswer;
     CheckBox checkbox7dAnswer;
+    CheckBox checkbox9aAnswer;
     CheckBox checkbox9bAnswer;
+    CheckBox checkbox9cAnswer;
     CheckBox checkbox9dAnswer;
 
     //checkbox booleans
     boolean isCheckbox7aChecked;
+    boolean isCheckbox7bChecked;
     boolean isCheckbox7cChecked;
     boolean isCheckbox7dChecked;
+    boolean isCheckbox9aChecked;
     boolean isCheckbox9bChecked;
+    boolean isCheckbox9cChecked;
     boolean isCheckbox9dChecked;
 
     //radio buttons
@@ -67,9 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
         // initialize checkbox views
         checkbox7aAnswer = findViewById(R.id.checkbox7aAnswer);
+        checkbox7bAnswer = findViewById(R.id.checkbox7bAnswer);
         checkbox7cAnswer = findViewById(R.id.checkbox7cAnswer);
         checkbox7dAnswer = findViewById(R.id.checkbox7dAnswer);
+        checkbox9aAnswer = findViewById(R.id.checkbox9aAnswer);
         checkbox9bAnswer = findViewById(R.id.checkbox9bAnswer);
+        checkbox9cAnswer = findViewById(R.id.checkbox9cAnswer);
         checkbox9dAnswer = findViewById(R.id.checkbox9dAnswer);
 
         //initialize edittext views
@@ -82,8 +91,15 @@ public class MainActivity extends AppCompatActivity {
         // get score
         score = onCheckboxClicked() + radioButtonSelected() + editTextAnswer();
         //make toast
-        Toast.makeText(this, "Your score is " + score + "!", Toast.LENGTH_SHORT).show();
+        if(score >= 6) {
+            Toast.makeText(this, "Your score is " + score + "! You passed!", Toast.LENGTH_SHORT).show();
+            }
+            else {
+            Toast.makeText(this, "Your score is " + score + "! You failed.", Toast.LENGTH_SHORT).show();
+            }
+
     }
+
 
     /**
      *  reset all answers
@@ -100,9 +116,12 @@ public class MainActivity extends AppCompatActivity {
         radio6cAnswer.setChecked(false);
         // set checkbox booleans to false
         checkbox7aAnswer.setChecked(false);
+        checkbox7bAnswer.setChecked(false);
         checkbox7cAnswer.setChecked(false);
         checkbox7dAnswer.setChecked(false);
+        checkbox9aAnswer.setChecked(false);
         checkbox9bAnswer.setChecked(false);
+        checkbox9cAnswer.setChecked(false);
         checkbox9dAnswer.setChecked(false);
         // set edittext to empty
         text8Answer.getText().clear();
@@ -117,16 +136,19 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
         // are checkboxes checked?
         isCheckbox7aChecked = checkbox7aAnswer.isChecked();
+        isCheckbox7bChecked = checkbox7bAnswer.isChecked();
         isCheckbox7cChecked = checkbox7cAnswer.isChecked();
         isCheckbox7dChecked = checkbox7dAnswer.isChecked();
+        isCheckbox9aChecked = checkbox9aAnswer.isChecked();
         isCheckbox9bChecked = checkbox9bAnswer.isChecked();
+        isCheckbox9cChecked = checkbox9cAnswer.isChecked();
         isCheckbox9dChecked = checkbox9dAnswer.isChecked();
 
         //add up score of checkboxes
-        if (isCheckbox7aChecked && isCheckbox7cChecked && isCheckbox7dChecked) {
+        if (isCheckbox7aChecked && !isCheckbox7bChecked && isCheckbox7cChecked && isCheckbox7dChecked) {
             score+=1;
         }
-        if (isCheckbox9bChecked && isCheckbox9dChecked) {
+        if (!isCheckbox9aChecked && isCheckbox9bChecked && !isCheckbox9cChecked && isCheckbox9dChecked) {
             score+=1;
         }
         return score;
@@ -173,8 +195,8 @@ public class MainActivity extends AppCompatActivity {
     private int editTextAnswer() {
         score = 0;
         // are correct answers entered?
-        edit8Answer = text8Answer.getText().toString();
-        edit10Answer = text10Answer.getText().toString();
+        edit8Answer = text8Answer.getText().toString().trim();
+        edit10Answer = text10Answer.getText().toString().trim();
 
         // add up score of edit answers
         if (edit8Answer.equalsIgnoreCase("Boyle\'s Law")) {
