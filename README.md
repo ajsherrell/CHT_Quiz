@@ -1,4 +1,4 @@
-# CHT_Quiz
+# CHT Quiz
 udacity android project - 
 
 A quiz for candadites studying to take the certified hyperbaric tech exam.
